@@ -1,0 +1,96 @@
+.speedLineOverlay {
+  position: absolute;
+  inset: -10%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.22;
+  background: repeating-linear-gradient(
+    164deg,
+    transparent 0 34px,
+    rgba(255, 248, 232, 0.12) 34px 36px,
+    transparent 36px 78px
+  );
+  mask-image: radial-gradient(circle at 50% 48%, #000, transparent 68%);
+  animation: speedRush 0.68s linear infinite;
+}
+
+@keyframes ambientDrift {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(2%, 1%, 0) scale(1.06);
+  }
+}
+
+@keyframes noiseShift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-1%, 1%, 0);
+  }
+  100% {
+    transform: translate3d(1%, -1%, 0);
+  }
+}
+
+@keyframes particleFloat {
+  from {
+    transform: translate3d(-10px, 12px, 0) scale(0.7);
+    opacity: 0.16;
+  }
+  to {
+    transform: translate3d(18px, -24px, 0) scale(1.25);
+    opacity: 0.78;
+  }
+}
+
+@keyframes speedRush {
+  from {
+    transform: translate3d(-2%, 0, 0);
+  }
+  to {
+    transform: translate3d(2%, -4%, 0);
+  }
+}
+
+@keyframes cardGlint {
+  0%,
+  52% {
+    transform: translateX(-130%) skewX(-12deg);
+  }
+  72%,
+  100% {
+    transform: translateX(130%) skewX(-12deg);
+  }
+}
+
+@keyframes breathe {
+  from {
+    transform: translate(-50%, -50%) scale(0.98);
+  }
+  to {
+    transform: translate(-50%, -51.5%) scale(1.025);
+  }
+}
+
+@keyframes portraitFloat {
+  from {
+    transform: translateY(0) rotate(-0.35deg);
+  }
+  to {
+    transform: translateY(-8px) rotate(0.35deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
