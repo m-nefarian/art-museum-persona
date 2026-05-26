@@ -5,21 +5,21 @@
   "type": "module",
   "homepage": "https://tz123.github.io/art-museum-persona/",
   "scripts": {
-  "dev": "vite",
-  "build": "tsc --noEmit && node ./node_modules/vite/bin/vite.js build",
-  "preview": "vite preview"
-},
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.2",
     "gsap": "^3.15.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "scheduler": "^0.27.0",
-    "typescript": "^6.0.3",
-    "vite": "^8.0.14",
     "zustand": "^5.0.13"
   },
   "devDependencies": {
+    "vite": "^8.0.14",
+    "typescript": "^6.0.3",
     "@types/node": "^25.0.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
